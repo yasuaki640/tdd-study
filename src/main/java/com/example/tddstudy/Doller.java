@@ -2,9 +2,8 @@ package com.example.tddstudy;
 
 class Doller extends Money {
 
-    public Doller(int amount, String currency) {
-        this.amount = amount;
-        this.currency = currency;
+    Doller(int amount, String currency) {
+        super(amount, currency);
     }
 
     Money times(int multiplier) {
