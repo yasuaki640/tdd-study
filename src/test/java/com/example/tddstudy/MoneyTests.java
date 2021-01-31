@@ -7,23 +7,23 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MoneyTests {
     @Test
     public void testMultipilication() {
-        Doller five = new Doller(5);
-        assertEquals(new Doller(10), five.times(2));
-        assertEquals(new Doller(15), five.times(3));
+        Money five = Money.doller(5);
+        assertEquals(Money.doller(10), five.times(2));
+        assertEquals(Money.doller(15), five.times(3));
     }
 
     @Test
     public void testEquality() {
-        assertTrue(new Doller(5).equals(new Doller(5)));
-        assertFalse(new Doller(5).equals(new Doller(6)));
-        assertTrue(new Franc(5).equals(new Franc(5)));
-        assertFalse(new Franc(5).equals(new Franc(6)));
-        assertFalse(new Franc(5).equals(new Doller(5)));
+        assertTrue(Money.doller(5).equals(Money.doller(5)));
+        assertFalse(Money.doller(5).equals(Money.doller(6)));
+        assertTrue(Money.franc(5).equals(Money.franc(5)));
+        assertFalse(Money.franc(5).equals(Money.franc(6)));
+        assertFalse(Money.franc(5).equals(Money.doller(5)));
     }
 
     @Test
     public void testFrancMultipilication() {
-        Franc five = new Franc(5);
+        Money five = Money.franc(5);
         assertEquals(new Franc(10), five.times(2));
         assertEquals(new Franc(15), five.times(3));
     }

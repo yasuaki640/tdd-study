@@ -1,12 +1,11 @@
 package com.example.tddstudy;
 
-public class Franc extends Money {
-
-    public Franc(int amount) {
+class Franc extends Money {
+    Franc(int amount) {
         this.amount = amount;
     }
 
-    public Money times(int multiplier) {
+    Money times(int multiplier) {
         return new Franc(amount * multiplier);
     }
 }
