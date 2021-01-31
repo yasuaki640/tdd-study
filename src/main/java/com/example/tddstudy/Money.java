@@ -17,11 +17,11 @@ abstract class Money {
     }
 
     static Money doller(int amount) {
-        return new Doller(amount);
+        return new Doller(amount,"USD");
     }
 
     static Money franc(int amount) {
-        return new Franc(amount);
+        return new Franc(amount, "CHF");
     }
 
 }
