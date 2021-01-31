@@ -1,13 +1,13 @@
 package com.example.tddstudy;
 
-public class Doller extends Money {
+class Doller extends Money {
 
     public Doller(int amount) {
         this.amount = amount;
+        this.currency = "USD";
     }
 
-    public Money times(int multiplier) {
+    Money times(int multiplier) {
         return new Doller(amount * multiplier);
     }
-
 }
