@@ -14,11 +14,11 @@ public class MoneyTests {
 
     @Test
     public void testEquality() {
-        assertTrue(Money.doller(5).equals(Money.doller(5)));
-        assertFalse(Money.doller(5).equals(Money.doller(6)));
-        assertTrue(Money.franc(5).equals(Money.franc(5)));
-        assertFalse(Money.franc(5).equals(Money.franc(6)));
-        assertFalse(Money.franc(5).equals(Money.doller(5)));
+        assertEquals(Money.doller(5), Money.doller(5));
+        assertNotEquals(Money.doller(6), Money.doller(5));
+        assertEquals(Money.franc(5), Money.franc(5));
+        assertNotEquals(Money.franc(6), Money.franc(5));
+        assertNotEquals(Money.doller(5), Money.franc(5));
     }
 
     @Test
@@ -33,5 +33,10 @@ public class MoneyTests {
     public void testCurrency() {
         assertEquals("USD", Money.doller(1).currency());
         assertEquals("CHF", Money.franc(1).currency());
+    }
+
+    @Test
+    public void testDifferentClassEquality() {
+        assertEquals(new Franc(10, "CHF"), new Money(10, "CHF"));
     }
 }

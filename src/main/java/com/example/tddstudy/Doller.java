@@ -6,7 +6,4 @@ class Doller extends Money {
         super(amount, currency);
     }
 
-    Money times(int multiplier) {
-        return Money.doller(amount * multiplier);
-    }
 }
