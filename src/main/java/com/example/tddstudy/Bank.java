@@ -2,6 +2,9 @@ package com.example.tddstudy;
 
 public class Bank {
     Money reduce(Expression source, String to) {
-        return Money.doller(10);
+        if (source instanceof Money)
+            return ((Money) source).reduce(to) ;
+        Sum sum = (Sum) source;
+        return sum.reduce(to);
     }
 }
